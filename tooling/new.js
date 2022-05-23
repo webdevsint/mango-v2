@@ -36,6 +36,10 @@ const confirmSchema = async (name, schema) => {
   const response = await prompts(question);
 
   if (response.confirmation === "y" || response.confirmation === "yes") {
+    const documents = require("../documents/list");
+
+    documents.push(name);
+
     const document = data.replace("${SCHEMA}", JSON.stringify(schema));
 
     fs.mkdirSync(path.resolve(__dirname, "../documents/", name));
@@ -46,6 +50,11 @@ const confirmSchema = async (name, schema) => {
     fs.writeFileSync(
       path.resolve(__dirname, "../documents/", name, "data.json"),
       "[]"
+    );
+
+    fs.writeFileSync(
+      path.resolve(__dirname, "../documents/list.js"),
+      `const list=${JSON.stringify(documents)};module.exports=list;`
     );
 
     console.log("document created!");

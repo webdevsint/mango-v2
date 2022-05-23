@@ -1,1 +1,1 @@
-module.exports = list = ['people']
+const list=[];module.exports=list;
