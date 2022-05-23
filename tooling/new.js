@@ -89,6 +89,4 @@ const setSchema = async (name) => {
   await confirmSchema(name, schema);
 };
 
-(async () => {
-  setName();
-})();
+setName();
