@@ -7,7 +7,7 @@
 ### Installation Guide: <a name="install"></a>
 Just clone the GitHub repo or dowload it from [Github](https://github.com/webdevsint/mango-v2).
 ```
-git clone -b <branch name> https://github.com/webdevsint/mango-v2.git
+git clone https://github.com/webdevsint/mango-v2.git
 ```
 
 Extract the zip if you downloaded it. Navigate to the directory. **Open up a terminal and type the following command:**
@@ -21,4 +21,32 @@ KEY=encryption_key
 ```
 And done!
 
-**Note:** Make sure your secret values are secure. Do not share them to anyone. Please **don't change the "KEY" secret** if you have any documents. Doing so will make those documents inaccessible without the original key.
+**Note:** Do not share them to anyone. Please **don't change the "KEY" secret** if you have any documents. Doing so will render those documents undecryptable without the original key.
+
+### Creating New Documents:
+
+Open up a terminal and and type the following command:
+
+```
+npm run new-doc
+```
+
+### Deleting Documents:
+
+To Delete any document head over to the **_"./tooling"_** folder in the root of your your installation folder. Open up a terminal and and type the following command:
+
+```
+node delete <document-name>
+```
+
+### Starting the API server:
+
+Navigate to your your installation folder. Open up a terminal and and type the following command:
+
+```
+npm run start
+```
+
+Your database's API should serve on [http://localhost:3000](#).
+
+**URL structure of the database (example):** [http://localhost:3000/document/test?key=secret](#)
