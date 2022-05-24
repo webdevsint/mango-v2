@@ -14,7 +14,7 @@ Extract the zip if you downloaded it. Navigate to the directory. **Open up a ter
 ```
 npm install --save
 ```
-We're not done just yet. Lastly you need to set some <a name="env">environment variables</a> or secrets in the **_"./.env"_** file we provided. You can find it in the root of your installation folder. Open it in any text editor an populate the empty fields. eg.
+Lastly you need to set some <a name="env">environment variables</a> or secrets in the **_"./.env"_** file we provided. You can find it in the root of your installation folder. Open it in any text editor an populate the empty fields. eg.
 ```
 API_KEY=secret
 KEY=encryption_key
