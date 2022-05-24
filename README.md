@@ -21,7 +21,7 @@ KEY=encryption_key
 ```
 And done!
 
-**Note:** Do not share them to anyone. Please **don't change the "KEY" secret** if you have any documents. Doing so will render those documents undecryptable without the original key.
+**Note:** Please **don't change the "KEY" secret** if you have any documents. Doing so will render those documents undecryptable without the original key.
 
 ### Creating New Documents:
 
