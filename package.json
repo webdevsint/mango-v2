@@ -1,13 +1,14 @@
 {
   "name": "mango-v2",
   "version": "2.0.0",
-  "description": "the simple database",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "new-doc": "cd tooling && node new"
+    "new-doc": "cd tooling && node new",
+    "delete": "cd tooling && node delete"
   },
-  "author": "Nehan YAser",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "aes256": "^1.1.0",
