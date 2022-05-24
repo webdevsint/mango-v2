@@ -4,7 +4,8 @@
   "description": "the simple database",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "new-doc": "cd tooling && node new"
   },
   "author": "Nehan YAser",
   "license": "MIT",
