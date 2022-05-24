@@ -31,7 +31,7 @@ And done!
 
 ### Creating New Documents:
 
-Open up a terminal and and type the following command:
+Open up a terminal in the root directory and and type the following command:
 
 ```
 npm run new-doc
@@ -39,10 +39,10 @@ npm run new-doc
 
 ### Deleting Documents:
 
-To Delete any document head over to the **_"./tooling"_** folder in the root of your your installation folder. Open up a terminal and and type the following command:
+Open up a terminal in the root directory and and type the following command:
 
 ```
-node delete <document-name>
+npm run delete <document-name>
 ```
 
 ### Starting the API server:
@@ -53,6 +53,28 @@ Navigate to your your installation folder. Open up a terminal and and type the f
 npm run start
 ```
 
-Your database's API should serve on [http://localhost:3000]().
+Your database's API should serve on [http://localhost:3000](#).
 
-**URL structure of the database (example):** [http://localhost:3000/document/test?key=secret]()
+**URL structure of the database (example):** [http://localhost:3000/document/test?key=secret](#)
+
+### Accessing Documents:
+
+![image](https://user-images.githubusercontent.com/67751528/170007432-56d9fd2d-c272-42f7-900a-f0a099d67b91.png)
+
+### Adding and Deleting Entries:
+
+To add a new entry document entry just send a **POST** request with an object in the body containing your entry. eg.
+
+![image](https://user-images.githubusercontent.com/67751528/170007882-e82d306d-0309-4b3d-859c-53a214d2ec7e.png)
+
+Endpoint used here:
+`http://localhost:3000/document/test?key=secret` **POST**
+
+Similarly, to delete document entries just send a **DELETE** request with an additional query parameter **"index"** with the index of the entry you want to delete from the document. eg.
+
+![image](https://user-images.githubusercontent.com/67751528/170007934-f931d9a5-c4bd-40f6-a3c6-28f327419547.png)
+
+Endpoint used here:
+`http://localhost:3000/document/test?key=secret&index=0` **DELETE**
+
+We used [reqbin](https://reqbin.com) in our examples to send requests to the API.
