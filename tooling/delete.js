@@ -17,7 +17,7 @@ if (!document) {
       documents.splice(index, 1);
     }
 
-    fs.rmdirSync(file, { recursive: true });
+    fs.rmSync(file, { recursive: true });
 
     fs.writeFileSync(
       path.resolve(__dirname, "../documents/list.js"),
