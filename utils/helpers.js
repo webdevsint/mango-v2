@@ -1,6 +1,5 @@
 const aes256 = require("aes256");
 
-// helper functions
 const verify = (document) => {
   const documents = require("../documents/list");
 
@@ -9,14 +8,21 @@ const verify = (document) => {
   }
 };
 
-function arrayEquals(a, b) {
-  return (
-    Array.isArray(a) &&
-    Array.isArray(b) &&
-    a.length === b.length &&
-    a.every((val, index) => val === b[index])
-  );
-}
+const schemaValidator = (schema, input) => {
+
+  const inputKeys = Object.keys(input);
+
+  if (schema.length !== inputKeys.length) return false;
+
+  for (let i = 0; i < schema.length; i++) {
+    if (!inputKeys.includes(schema[i])) {
+      return false;
+    }
+  }
+
+  return true;
+
+};
 
 class Encryption {
   constructor(id, text, key) {
@@ -36,7 +42,7 @@ class Decryption {
 
 module.exports = {
   verify,
-  arrayEquals,
+  schemaValidator,
   Encryption,
   Decryption,
 };
