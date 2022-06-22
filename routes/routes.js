@@ -13,7 +13,7 @@ const router = express.Router();
 
 const {
   verify,
-  arrayEquals,
+  schemaValidator,
   Encryption,
   Decryption,
 } = require("../utils/helpers");
@@ -70,7 +70,9 @@ router.post("/document/:document", (req, res) => {
       if (Object.keys(entry).length !== 0) {
         const keys = Object.keys(entry);
 
-        if (arrayEquals(keys, schema)) {
+        console.log(schemaValidator(keys, schema))
+
+        if (schemaValidator(keys, schema)) {
           const { addEntry } = require(`../documents/${document}/document`);
 
           const id = nanoid(8);
