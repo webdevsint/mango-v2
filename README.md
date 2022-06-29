@@ -34,7 +34,7 @@ And done!
 Open up a terminal in the root directory and and type the following command:
 
 ```
-npm run new-doc
+npm run new
 ```
 
 ### Deleting Documents:
