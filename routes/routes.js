@@ -70,9 +70,7 @@ router.post("/document/:document", (req, res) => {
       if (Object.keys(entry).length !== 0) {
         const keys = Object.keys(entry);
 
-        console.log(schemaValidator(keys, schema))
-
-        if (schemaValidator(keys, schema)) {
+        if (schemaValidator(entry, schema)) {
           const { addEntry } = require(`../documents/${document}/document`);
 
           const id = nanoid(8);
