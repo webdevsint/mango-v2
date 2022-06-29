@@ -6,7 +6,7 @@
 
 ### Installation Guide: <a name="install"></a>
 
-Just clone the GitHub repo or dowload it from [Github](https://github.com/webdevsint/mango-v2).
+Just clone the GitHub repo or [download](https://github.com/webdevsint/mango-v2/archive/refs/heads/main.zip) it from here.
 
 ```
 git clone https://github.com/webdevsint/mango-v2.git
